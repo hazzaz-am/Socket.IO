@@ -27,7 +27,7 @@ io.on("connection", (socket) => {
   })
 
   socket.on("typing", ({username, room}) => {
-    socket.to(room).emit('user_typing', username, room);
+    socket.to(room).emit('user_typing', username);
   })
 
   socket.on("disconnect", () => {
